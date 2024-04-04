@@ -17,7 +17,7 @@ public class PostTests extends BasePOJO {
         List<Posts> postsList = getPosts();
         boolean found = false;
         for (Posts post : postsList) {
-            int userId = post.getUserId();
+            long userId = post.getUserId();
             String title = post.getTitle();
             System.out.println("User ID: " + userId + ", Title: " + title);
             if (userId == 7 && title.equals("voluptatem laborum magni")) {

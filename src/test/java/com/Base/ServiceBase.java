@@ -12,4 +12,5 @@ public class ServiceBase {
                 .when()
                 .get(BASE_URI + endpoint);
     }
+
 }

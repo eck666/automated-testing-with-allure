@@ -5,10 +5,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Posts extends BasePOJO {
     @JsonProperty("userId")
-    private int userId;
+    private long userId;
 
     @JsonProperty("id")
-    private int id;
+    private long id;
 
     @JsonProperty("title")
     private String title;
@@ -16,11 +16,11 @@ public class Posts extends BasePOJO {
     @JsonProperty("body")
     private String body;
 
-    public int getUserId() {
+    public long getUserId() {
         return userId;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 

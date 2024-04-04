@@ -3,8 +3,9 @@ package com.Base;
 import com.Models.Posts;
 import io.restassured.response.Response;
 
-import java.util.Arrays;
 import java.util.List;
+
+import static io.restassured.RestAssured.get;
 
 public class BasePOJO extends ServiceBase {
     //todo get set methodları burda olacak ortak methdolar da burda olabilir
