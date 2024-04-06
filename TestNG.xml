@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite" verbose="1">
+    <listeners>
+        <listener class-name="utils.AllureListener"/>
+    </listeners>
+    <test name="AllTests">
+        <classes>
+            <class name="com.Tests.SingleTest.PostTests"/>
+            <!-- Diğer test sınıflarını buraya ekleyin -->
+        </classes>
+    </test>
+</suite>
