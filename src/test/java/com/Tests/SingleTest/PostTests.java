@@ -5,13 +5,17 @@ import com.Models.Posts;
 import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utils.Log;
 import utils.Terminal;
+import utils.TestListener;
 
 import java.util.List;
 
+import static org.testng.Assert.assertTrue;
 
+@Listeners(TestListener.class)
 public class PostTests extends BasePOJO {
 
     @Test
@@ -22,17 +26,19 @@ public class PostTests extends BasePOJO {
         for (Posts post : postsList) {
             long userId = post.getUserId();
             String title = post.getTitle();
-            System.out.println("User ID: " + userId + ", Title: " + title);
             if (userId == 7 && title.equals("voluptatem laborum magni")) {
                 Log.warning("emocanek");
                 found = true;
                 break;
             }
         }
-
+        System.out.println("test1");
         Assert.assertTrue(found, "Could not find userId 7 with title 'voluptatem laborum magni'");
     }
-//    @AfterSuite(alwaysRun = true)
-//    public void openAllureReport() {
-//        Terminal.runCommand("cmd /c start allure serve target/allure-report");}
+
+    @Test
+    public void testSample() {
+        System.out.println("test2");
+        assertTrue(true);
+    }
 }
