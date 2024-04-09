@@ -9,13 +9,13 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utils.Log;
 import utils.Terminal;
-import utils.TestListener;
+import utils.TestAllureListener;
 
 import java.util.List;
 
 import static org.testng.Assert.assertTrue;
 
-@Listeners(TestListener.class)
+@Listeners({TestAllureListener.class})
 public class PostTests extends BasePOJO {
 
     @Test
