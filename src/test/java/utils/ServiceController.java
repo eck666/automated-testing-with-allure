@@ -11,9 +11,14 @@ public class ServiceController {
         tl.set(page);
         return tl.get();
     }
-    @AfterSuite(alwaysRun = true)
+
     public static void openAllureReport() {
         System.out.println("commanda geldi");
-        Terminal.runCommand("cmd /c start allure serve allure-results");
+        Terminal.runCommand("cmd /c start allure serve -h localhost");
+    }
+
+    public static void deleteAllureHistory() {
+        System.out.println("history geldi");
+        Terminal.runCommand("cmd /c start allure generate --clean --output allure-results");
     }
 }

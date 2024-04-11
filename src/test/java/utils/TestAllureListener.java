@@ -6,6 +6,8 @@ import io.qameta.allure.Attachment;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 
 public class TestAllureListener implements ITestListener {
 
@@ -16,8 +18,9 @@ public class TestAllureListener implements ITestListener {
 
     @Override
     public void onStart(ITestContext iTestContext) {
+        AllurePropertiesUtils.isDeleteHistoryEnabled();
         System.out.println("I am in onStart method " + iTestContext.getName());
-        iTestContext.getAllTestMethods();
+
     }
 
     @Override

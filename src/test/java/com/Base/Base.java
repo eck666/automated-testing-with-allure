@@ -9,14 +9,11 @@ import java.util.List;
 
 import static io.restassured.RestAssured.get;
 
+@Listeners({TestAllureListener.class})
+public class Base {
+    //todo ortak assuretionları burda olmalı her yerde kullandıklarım burda olmalı
 
-public class BasePOJO extends ServiceBase {
-    //todo get set methodları burda olacak ortak methdolar da burda olabilir
 
-    public static List<Posts> getPosts() {
-        Response responsePost = get("/posts");
-        return responsePost.jsonPath().getList(".", Posts.class);
-    }
 
     public void getComments() {
         Response responseComment = get("/comment");

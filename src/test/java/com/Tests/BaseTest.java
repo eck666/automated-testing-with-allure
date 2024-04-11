@@ -1,7 +1,7 @@
 package com.Tests;
 
-import com.Base.BasePOJO;
+import com.Base.Base;
 
-public class BaseTest extends BasePOJO {
+public class BaseTest extends Base {
 
 }

@@ -1,22 +1,19 @@
 package com.Tests.SingleTest;
 
-import com.Base.BasePOJO;
+import com.Base.Base;
 import com.Models.Posts;
 import io.qameta.allure.Description;
 import org.testng.Assert;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utils.Log;
-import utils.Terminal;
-import utils.TestAllureListener;
 
 import java.util.List;
 
+import static com.Base.ServiceBase.getPosts;
 import static org.testng.Assert.assertTrue;
 
-@Listeners({TestAllureListener.class})
-public class PostTests extends BasePOJO {
+
+public class PostTests extends Base {
 
     @Test
     @Description("Verify if userId is 7 and title is 'voluptatem laborum magni'")

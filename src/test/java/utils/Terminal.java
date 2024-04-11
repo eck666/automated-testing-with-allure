@@ -16,5 +16,4 @@ public final class Terminal {
             Log.fail("Command execution failed: " + e.getMessage());
         }
     }
-
 }

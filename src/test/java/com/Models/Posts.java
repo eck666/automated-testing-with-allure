@@ -1,9 +1,9 @@
 package com.Models;
 
-import com.Base.BasePOJO;
+import com.Base.Base;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Posts extends BasePOJO {
+public class Posts extends Base {
     @JsonProperty("userId")
     private long userId;
 
