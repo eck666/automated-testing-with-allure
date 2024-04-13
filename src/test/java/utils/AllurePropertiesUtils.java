@@ -20,6 +20,6 @@ public class AllurePropertiesUtils {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return false;
+        return false; // Hata durumunda veya "deleteHistory" değeri "true" değilse false döndür
     }
 }
