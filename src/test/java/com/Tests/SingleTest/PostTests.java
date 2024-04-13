@@ -35,7 +35,35 @@ public class PostTests extends Base {
 
     @Test
     public void testSample() {
-        System.out.println("test2");
-        assertTrue(true);
+        List<Posts> postsList = getPosts();
+        boolean found = false;
+        for (Posts post : postsList) {
+            long userId = post.getUserId();
+            String title = post.getTitle();
+            if (userId == 7 && title.equals("voluptatem laborum magni")) {
+                Log.warning("emocanek");
+                found = true;
+                break;
+            }
+        }
+        System.out.println("test1");
+        Assert.assertTrue(found, "Could not find userId 7 with title 'voluptatem laborum magni'");
+    }
+
+    @Test
+    public void testSample2() {
+        List<Posts> postsList = getPosts();
+        boolean found = false;
+        for (Posts post : postsList) {
+            long userId = post.getUserId();
+            String title = post.getTitle();
+            if (userId == 7 && title.equals("voluptatem laborum magni")) {
+                Log.warning("emocanek");
+                found = true;
+                break;
+            }
+        }
+        System.out.println("test1");
+        Assert.assertTrue(found, "Could not find userId 7 with title 'voluptatem laborum magni'");
     }
 }
