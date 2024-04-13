@@ -19,6 +19,7 @@ public class ServiceController {
 
     public static void deleteAllureHistory() {
         System.out.println("history geldi");
-        Terminal.runCommand("cmd /c start allure generate --clean --output allure-results");
+        Terminal.runCommand("cmd /c start allure generate --clean --output C:\\Users\\emir\\IdeaProjects\\fakeapitest\\allure-results");
+
     }
 }
