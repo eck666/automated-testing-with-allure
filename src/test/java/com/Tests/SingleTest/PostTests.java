@@ -15,6 +15,9 @@ import static org.testng.Assert.assertTrue;
 
 public class PostTests extends Base {
 
+    public static final String EXPECTED = "expected";
+    public static final String ACTUAL = "actual";
+
     @Test
     @Description("Verify if userId is 7 and title is 'voluptatem laborum magni'")
     public void testUserId() {
@@ -24,30 +27,29 @@ public class PostTests extends Base {
             long userId = post.getUserId();
             String title = post.getTitle();
             if (userId == 7 && title.equals("voluptatem laborum magni")) {
-                Log.warning("emocanek");
+                System.out.println("Title " + title);
                 found = true;
                 break;
             }
         }
-        System.out.println("test1");
-        Assert.assertTrue(found, "Could not find userId 7 with title 'voluptatem laborum magni'");
+        if (!found) {
+            Log.fail("Could not find userId 7 with title 'voluptatem laborum magni'");
+        }
     }
 
+
+
     @Test
-    public void testSample() {
+    public void testUserIdLong() {
         List<Posts> postsList = getPosts();
-        boolean found = false;
-        for (Posts post : postsList) {
-            long userId = post.getUserId();
-            String title = post.getTitle();
-            if (userId == 7 && title.equals("voluptatem laborum magni")) {
-                Log.warning("emocanek");
-                found = true;
-                break;
+        for (Posts posts: postsList) {
+            long userId = posts.getUserId();
+            if ( userId<= 101) {
+                Log.pass("User ID length <= 101");
+            } else {
+                Log.fail("User ID lenght >= 101");
             }
         }
-        System.out.println("test1");
-        Assert.assertTrue(found, "Could not find userId 7 with title 'voluptatem laborum magni'");
     }
 
     @Test
@@ -63,7 +65,6 @@ public class PostTests extends Base {
                 break;
             }
         }
-        System.out.println("test1");
         Assert.assertTrue(found, "Could not find userId 7 with title 'voluptatem laborum magni'");
     }
 }
