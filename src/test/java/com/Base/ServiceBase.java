@@ -1,15 +1,10 @@
 package com.Base;
 
 import com.Models.Posts;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.qameta.allure.Attachment;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-
 import java.util.List;
-
-import static io.restassured.RestAssured.get;
 
 public class ServiceBase {
     //todo get set olmalı

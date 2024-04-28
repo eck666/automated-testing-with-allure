@@ -3,14 +3,10 @@ package com.Tests.SingleTest;
 import com.Base.Base;
 import com.Models.Posts;
 import io.qameta.allure.Description;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.Log;
-
 import java.util.List;
-
 import static com.Base.ServiceBase.getPosts;
-import static org.testng.Assert.assertTrue;
 
 
 public class PostTests extends Base {
